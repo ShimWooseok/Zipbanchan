@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 스와이퍼 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- 테일윈드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 구글폰트 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./jss.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        
+    <header>
+        <div class="header-top w-[100%] h-[112px] border">
+            <div class="con flex items-center justify-between h-[100%]  p-[32px_0_20px_0]">
+                <form class="w-[222px] h-[40px] flex" action="">
+                    <input class="w-[182px] h-[40px] p-[12px_0_12px_16px] text-[14px]" type="text"
+                        placeholder="검색어를 입력해주세요">
+                    <button class="w-[40px] h-[40px] bg-[#0d5611] flex items-center justify-center">
+                        <img class="w-[24px] h-[24px]"
+                            src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/search_w.svg" alt="">
+                    </button>
+                </form>
+                <img class="w-[140px] h-[58px]" src="https://www.zipbanchan.co.kr/shop/remain/imgs/logo_pc.svg" alt="">
+                <div class="ul-wrap ">
+                    <div class="top-wrap  row">
+                        <ul class="text-[#757575] cell-r  flex text-[14px] pb-[24px]">
+                            <li class="pl-[24px]"><a href="#">로그인</a></li>
+                            <li class="pl-[24px]"><a href="#">회원가입</a></li>
+                            <li class="pl-[24px]"><a href="#">내정보</a></li>
+                        </ul>
+                    </div>
+                    <div class="bottom-wrap">
+                        <ul class="flex text-[18px] ">
+                            <li class="pl-[24px]"><a class="flex items-center gap-[5px]" href="#">
+                                    <img src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon-story.svg" alt="">
+                                    이야기</a></li>
+                            <li class="pl-[24px]"><a class="flex items-center gap-[5px]" href="#">
+                                    <img src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon-banchan.svg" alt="">
+                                    반찬보기</a></li>
+                            <li class="pl-[24px]"><a class="flex items-center gap-[5px]" href="#">
+                                    <img src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/cart-black.svg"
+                                        alt="">
+                                    장바구니</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-[100%] h-[112px]"></div>
+        <div class="header-bottom w-[100%] p-[40px_0_40px_0]">
+            <div class="con">
+                <ul class="row ">
+                    <li class="cell w-[373.3px] h-[100%] m-[0_10px]"><a href="#">모든반찬</a>
+                        <div class="flex">
+                            <ul class="w-[50%]">
+                                <li><a href="#">그리운 집반찬</a></li>
+                                <li><a href="#">김치 기획전</a></li>
+                                <li><a href="#">무침</a></li>
+                                <li><a href="#">조림</a></li>
+                                <li><a href="#">요리 놀이터</a></li>
+                                <li><a href="#">소분야채</a></li>
+                                <li><a href="#">묶음반찬</a></li>
+                                <li><a href="#">김치/절임/젓갈</a></li>
+                                <li><a href="#">곡류/양념</a></li>
+                                <li><a href="#">예치금</a></li>
+                            </ul>
+                            <ul class="">
+                                <li><a href="#">집반찬의 선물</a></li>
+                                <li><a href="#">정기배송</a></li>
+                                <li><a href="#">볶음</a></li>
+                                <li><a href="#">어린이 반찬</a></li>
+                                <li><a href="#">국/찌개/탕</a></li>
+                                <li><a href="#">메인요리</a></li>
+                                <li><a href="#">협업상품</a></li>
+                                <li><a href="#">전/생선</a></li>
+                                <li><a href="#">대용량</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cell w-[373.3px] h-[100%] m-[0_10px]"><a href="#">간편검색</a>
+                        <div class="flex">
+
+                            <ul class="w-[50%]">
+                                <li><a href="#">#신제품</a></li>
+                                <li><a href="#">#냉동</a></li>
+                                <li><a href="#">#따듯하게먹는반찬</a></li>
+                                <li><a href="#">#제철반찬</a></li>
+                            </ul>
+                            <ul class="">
+                                <li><a href="#">#인기</a></li>
+                                <li><a href="#">#맵지않음</a></li>
+                                <li><a href="#">#조리필요</a></li>
+                                <li><a href="#">#차갑게먹는반찬</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cell w-[373.3px] h-[100%] m-[0_10px]"><a href="#">인기검색</a>
+                        <div class="flex">
+
+                            <ul class="w-[50%]">
+                                <li><a href="#">#할인반찬</a></li>
+                                <li><a href="#">#부모님반찬</a></li>
+                                <li><a href="#">#제철반찬</a></li>
+                                <li><a href="#">#쿠킹박스</a></li>
+                            </ul>
+                            <ul class="">
+                                <li><a href="#">#어린이반찬</a></li>
+                                <li><a href="#">#소분야채</a></li>
+                                <li><a href="#">#반조리</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="swiper-box1 w-[100%] h-[480px] bg-red-500 mt-[40px]">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"
+                    style="background-image: url(./img/main01.jpg);">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image: url(./img/main02.jpg);">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image: url(./img/main03.jpg);">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image: url(./img/main04.jpg);">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image: url(./img/main05.jpg);">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image: url(./img/main06.jpg);">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image: url(./img/main07.jpg);">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image: url(./img/main08.jpg);">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image: url(./img/main09.jpg);">
+                </div>
+                <div class="swiper-slide"
+                    style="background-image: url(./img/main10.jpg);">
+                </div>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev "></div>
+            <div class="swiper-button-next w-[48px] h-[48px] bg-black"></div>
+
+        </div>
+    </div>
+    <div class="section section01 mt-[50px]">
+        <div class="con h-[150px]">
+            <img src="https://www.zipbanchan.co.kr/shop/data/skin/mera_ws/img/banner/ban_reason%202.jpg" alt="">
+        </div>
+    </div>
+    <div class="section section02 mt-[70px]">
+        <div class="con">
+            <div class="flex justify-between items-end">
+                <div class="title">
+                    어린이 반찬
+                </div>
+                <div class="more flex gap-[5px] text-[14px] text-[#757575]">
+                    <p>더보기</p>
+                    <img src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/right.svg" alt="">
+                </div>
+            </div>
+            <div class="swiper-box2 mt-[40px]">
+                <div class="swiper mySwiper ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">야채소세지부침</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">바른 재료로 만든 야채소세지</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">4,500 <span
+                                    class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1608_ZIP_P_6276_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">우리콩 두부햄볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">인기만점 아이반찬</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1314_ZIP_P_6246_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">한돈 시금치소보로 덮밥</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">우리아이 영양만점 한그릇 덮밥요리</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">6,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1453_ZIP_P_6252_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">맛살야채볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">입안 가득 다채로운 식감</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">5,300원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1596_ZIP_P_3120_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">야채소시지볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">바른재료로 만든 야채소시지</div>
+                            <div class="price mt-[16px] text-[#b42c11] text-[16px] font-bold">4,500원</div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="swiper-button-next2"></div>
+                <div class="swiper-button-prev2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section section03 mt-[100px]">
+
+        <div class="con">
+            <div class="img-wrap row">
+                <div class="img-box cell w-[280px] h-[192px] ">
+                    <img src="https://zipbanchan.godohosting.com/banner/linebanner/banner_1_pc_.png" alt="">
+                </div>
+                <div class="img-box cell w-[280px] h-[192px] ml-[20px]">
+                    <img src="https://zipbanchan.godohosting.com/banner/linebanner/banner_2_pc_.png" alt="">
+                </div>
+                <div class="img-box cell w-[580px] h-[192px] ml-[20px]">
+                    <img src="https://zipbanchan.godohosting.com/banner/linebanner/banner_3_pc_.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="section section04 mt-[70px]">
+        <div class="con w-[1200px]">
+            <div class="title">
+                주간 추천반찬
+            </div>
+            <div class="swiper-box3 mt-[40px]">
+                <!-- Slider main container -->
+                <div class="swiper mySwiper">
+                                    <!-- If we need pagination -->
+                 <div class="swiper-pagination3 mb-[25px]">
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet">무침</span>
+                    <span class="swiper-pagination-bullet">볶음</span>
+                    <span class="swiper-pagination-bullet">조림</span>
+                    <span class="swiper-pagination-bullet">조림</span>
+                    <span class="swiper-pagination-bullet">소분야채</span>
+                    <span class="swiper-pagination-bullet">메인요리</span>
+                    <span class="swiper-pagination-bullet">쿠킹박스</span>
+                    <span class="swiper-pagination-bullet">국/찌개/탕</span>
+                    <span class="swiper-pagination-bullet">김치/절임/젓갈</span>
+                 </div>
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/kid/kid_24.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">한우무볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">달달한 무와 짭조름한 한우의 조합</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">5,300<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/kid/kid_49.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">맛살 계란찜</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">아이들을 위한 영양반찬</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">5,500<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/kid/kid_4.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] flex gap-[10px]"><p class="text-[#B41C11]">#인기</p><p>#맵지않음</p></div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">한우계란소보로</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">새로운 계란요리</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">5,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/kid/kid_48.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">피자 덮밥 소스</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">간단하지만 맛있고 든든한</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">6,500<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/muchim/muchim_24.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">시금치나물</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">국내산 참께기름으로 향긋하게 무쳤어요</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">3,600<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/muchim/muchim_8.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">매콤 콩나물무침</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">국내산 참께기름으로 아삭하게</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">3,900<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/muchim/muchim_22.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">톳두부무침</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">바다향 가득 담은</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">4,300<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/muchim/muchim_9.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#b41c11]">#인기</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">새콤달콤 도라지무침</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">국내산 도라지와 오이를 달콤하게</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">7,300<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/fry/fry_4.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] flex gap-[5px]"><p class="text-[#b41c11]">#인기</p><p>#맵지않음</p></div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">감자채볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">고소하면서 담백한 감자채볶음</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">3,500<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/fry/fry_3.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] flex gap-[5px]"><p class="text-[#b41c11]">#인기</p><p>#맵지않음</p></div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">느타리버섯볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">담백한 버섯 특유의 향미가 일품</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">3,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/fry/fry_2.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">들깨 고구마 줄기볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">들깨가루에 고소하게 볶았어요</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">4,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/fry/fry_37.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">매콤 어묵볶음</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">매콤한 밥반찬을 찾고 계신가요?</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">5,300<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/jolim/jolim_30.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">단호박조림</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">은은한 단맛이 매력적인</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">4,300<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/jolim/jolim_12.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] flex gap-[5px]"><p class="text-[#b41c11]">#신제품</p><p>#맵지않음</p></div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">연근조림</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">국내산 연근과 국내산 콩 간장</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">4,600<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/jolim/jolim_3.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">검은콩조림</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">국내산 검은콩은 약콩입니다.</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">4,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/jolim/jolim_13.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">메추리알 간장조림</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">한 입에 쏙들어가는 동글동글 메추리알</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">5,300<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box  bg-red-200">
+                                <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/17_vegetable/1495_ZIP_P_7049_T.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">소량야채_청양고추</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">얼큰하게, 매콤하게</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">1,280<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box   bg-red-200">
+                                <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/17_vegetable/1494_ZIP_P_7047_T.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">소량야채_양파</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">신선해서 더 맛있는</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">1,880<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box   bg-red-200">
+                                <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/17_vegetable/1491_ZIP_P_7053_T.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">손질야채_볶음밥용</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">빠르고 간편하게 만드는 볶음밥</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">2,580<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box  bg-red-200">
+                                <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/17_vegetable/1492_ZIP_P_7051_T.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">손질야채_짜장카레용</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">담백하고 부드러운 야채들로 풍성하게</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">3% 1,280<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/main/main_37.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">한돈 매콤 제육볶음_반조리</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">밥 반찬으로 제육볶음은 진리입니다</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">11,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/main/main_48.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#b41c11]">#신제품</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">삼치엿장조힘</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">단짠단짠 매력적인 밥반찬</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">14,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/main/main_39.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">간장 오리 주물럭_반조리</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">아이 반찬으로 안성맞춤</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">14,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/main/main_50.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">더덕 새송이구이_반조리</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">어른들을 위한 별미</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">14,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/cookingbox/cooking_22.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">한돈 간장불고기_쿠킹박스</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">짭조름해서 더 맛있는</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">13,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/cookingbox/cooking_20.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">한돈 매콤 제육볶음_쿠킹박스</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">밥 반찬으로 제육볶음은 진리입니다</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">15,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/cookingbox/cooking_21.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">한돈 돼지돼지 김치찌개_쿠킹박스</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">끓이면 끓일수록 더 맛있어요</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">16,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/cookingbox/cooking_19.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">한돈 돼지고기 짜글이_쿠킹박스</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">얼큰하고 자박자박한 국물이 일품</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">17,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/soup/soup_3.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] flex gap-[5px]"><p class="text-[#007289]">#냉동</p><p>#맵지않음</p></div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">한우사골곰탕(냉동)</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">국물이 진하고 담백해요</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">7,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/soup/soup_13.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] flex gap-[5px]"><p class="text-[#007289]">#냉동</p><p>#맵지않음</p></div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">배추 된장국(냉동)</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">국산콩 된장과 배추로 구수한</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">8,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/soup/soup_29.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">한돈 청국장찌개</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">창국장 특유의 구수한 막</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">12,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/soup/soup_24.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] ">#맵지않음</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">순한 오징어무국</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">부드럽고 담백한 국물</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">13,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/gimchi/gimchi_14.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">김장아찌</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">우리집 단골 반찬</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">3,800<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/gimchi/gimchi_16.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">양념 깻잎지</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">따뜻한 밥이 생각나는 깻잎반찬</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">5,300<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/gimchi/gimchi_8.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">나박김치</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">상큼하고 시원한 맛이 일품인</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">5,300<span class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/375X500px/gimchi/gimchi_4.jpg" alt="">
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] text-[#fff]">#</div>
+                            <div class="title-box text-[16px] font-bold mt-[5px]">깍두기</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">시원한 국물 먹을 때 깍두기는 필수</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">5,800<span class="text-[13px]">원</span></div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section05 mt-[100px]">
+        <div class="con w-[1200px]">
+            <img src="https://zipbanchan.godohosting.com/story/2022_kimchi/2022_kimchi_linebanner_pc.jpg" alt="">
+        </div>
+    </div>
+    <div class="section section06 mt-[70px]">
+        <div class="con">
+            <div class="flex justify-between items-end">
+                <div class="title">
+                    새로운 반찬
+                </div>
+                <div class="more flex gap-[5px] text-[14px] text-[#757575]">
+                    <p>더보기</p>
+                    <img src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/right.svg" alt="">
+                </div>
+            </div>
+            <div class="swiper-box2 mt-[40px]">
+                <div class="swiper mySwiper ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/5_kid/1680_ZIP_C_5070_S1.jpg"
+                                    alt="">
+
+                            </div>
+
+                            <div class="title-box text-[16px] font-bold mt-[36px]">사랑담은 타르타르소스</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">담백한 생선까스를 부드러운 소스에 풍덩</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">3,500 <span
+                                    class="text-[13px]">원</span></div>
+                        </div>  
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/9_soup/283_ZIP_P_2026_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] flex gap-[5px]"><p class="text-[#0072b9]">#냉동</p><p>#맵지않음</p></div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">홍합 미역국(냉동)</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">시원하고 개운한 맛</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">5,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/6_jolim/1184_ZIP_P_4065_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="title-box text-[16px] font-bold mt-[36px]">홍합 무조림</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[3px]">이색 조림 반찬</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">5,500원</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/4_collaboration/1586_ZIP_C_5041_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] flex gap-[5px]"><p class="text-[#b41c11]">신제품</p> <p class="text-[#0072b9]">#냉동</p><p>#맵지않음</p></div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">우리밀 통등심 돈까스(냉동)</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">겉바속촉의 정석!</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">10,800원</div>
+                        </div>
+                        <div class="swiper-slide slide05">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/2_set/1655_ZIP_P_9352_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] "><p class="text-[#b41c11]">#신제품</p></div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">김장 실속세트</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">실속있게 만나는 김장철 분위기</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">7% 34,800 <span
+                                    class="text-[13px]">원</span></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://zipbanchan.godohosting.com/800X800px/2_set/1650_ZIP_P_9351_T.jpg"
+                                    alt="">
+
+                            </div>
+                            <div class="tag text-[#323d33] text-[12px] mt-[24px] "><p class="text-[#b41c11]">#신제품</p></div>
+                            <div class="title-box text-[16px] font-bold mt-[12px]">김장 가속세트</div>
+                            <div class="txt text-[14px] text-[#757575] mt-[8px]">온 가족이 즐기는 김장철 분위기</div>
+                            <div class="price mt-[8px] text-[#b42c11] text-[16px] font-bold">12% 48,800 <span
+                                    class="text-[13px]">원</span></div>
+                        </div>
+            
+                        
+               
+                    </div>
+
+
+                </div>
+                <div class="swiper-button-next2"></div>
+                <div class="swiper-button-prev2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section section07 mt-[100px]">
+        <div class="con w-[1200px]">
+            <img src="https://zipbanchan.godohosting.com/story/2022/2022_worldcup/2022_worldcup_linebanner_pc.png" alt="">
+        </div>
+    </div>
+    <div class="section section08 mt-[60px]">
+        <div class="con w-[1200px]">
+            <div class="title pl-[10px]">
+                정기배송
+            </div>
+            <div class="top-wrap mt-[40px] p-[0_10px] flex justify-between">
+                <div class="content-box w-[380px] h-[auto]">
+                    <div class="img-box w-[380px] h-[380px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/1_regular/1631_ZIP_P_9346_T.jpg" alt="">
+                    </div>
+                    <div class="tag text-[#b41c11] text-[12px] mt-[20px]">#신제품</div>
+                    <div class="title-box font-bold mt-[8px]">골고루반찬식단(1~2인)</div>
+                    <div class="txt text-[#757575] text-[14px] mt-[6px]">메인요리1, 반찬 5~6개(1회)</div>
+                    <div class="price text-[#b41c11] mt-[8px] font-bold">11% 36,000원</div>
+                    <div class="exception line-through text-[#bbbbbb] text-[14px]">41,500원</div>
+                </div>
+                <div class="content-box w-[380px] h-[auto]">
+                    <div class="img-box w-[380px] h-[380px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/1_regular/478_ZIP_P_9077_T_2.jpg" alt="">
+                    </div>
+                    <div class="title-box font-bold mt-[32px]">실속식단(1~2인)</div>
+                    <div class="txt text-[#757575] text-[14px] mt-[6px]">국1, 메인요리1, 반찬 4~5개(1회)</div>
+                    <div class="price text-[#b41c11] mt-[8px] font-bold">11% 38,100원</div>
+                    <div class="exception line-through text-[#bbbbbb] text-[14px]">42,800원</div>
+                </div>
+                <div class="content-box w-[380px] h-[auto]">
+                    <div class="img-box w-[380px] h-[380px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/1_regular/965_ZIP_P_9175_T_2.jpg" alt="">
+                    </div>
+                    <div class="title-box font-bold mt-[32px]">부모님식단(1~2인)</div>
+                    <div class="txt text-[#757575] text-[14px] mt-[6px]">국1, 메인요리1, 반찬 4~5개(1회)</div>
+                    <div class="price text-[#b41c11] mt-[8px] font-bold">11% 42,000원</div>
+                    <div class="exception line-through text-[#bbbbbb] text-[14px]">47,800원</div>
+                </div>
+            </div>
+            <div class="bottom-wrap mt-[28px] p-[0_10px] flex justify-between">
+                <div class="content-box w-[380px] h-[auto]">
+                    <div class="img-box w-[380px] h-[380px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/1_regular/966_ZIP_P_9174_T_2.jpg" alt="">
+                    </div>
+                    <div class="title-box font-bold mt-[32px]">어린이식단(1~2인)</div>
+                    <div class="txt text-[#757575] text-[14px] mt-[6px]">국1, 메인요리1, 반찬 5~6개(1회)</div>
+                    <div class="price text-[#b41c11] mt-[8px] font-bold">13% 50,300원</div>
+                    <div class="exception line-through text-[#bbbbbb] text-[14px]">57,800원</div>
+                </div>
+                <div class="content-box w-[380px] h-[auto]">
+                    <div class="img-box w-[380px] h-[380px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/1_regular/477_ZIP_P_9076_T_2.jpg" alt="">
+                    </div>
+                    <div class="title-box font-bold mt-[32px]">유아님식단(1~2인)</div>
+                    <div class="txt text-[#757575] text-[14px] mt-[6px]">국1, 메인요리1, 반찬 5~6개(1회)</div>
+                    <div class="price text-[#b41c11] mt-[8px] font-bold">13% 50,300원</div>
+                    <div class="exception line-through text-[#bbbbbb] text-[14px]">57,800원</div>
+                </div>
+                <div class="content-box w-[380px] h-[auto]">
+                    <div class="img-box w-[380px] h-[380px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/1_regular/479_ZIP_P_9078_T_2.jpg" alt="">
+                    </div>
+                    <div class="title-box font-bold mt-[32px]">가족식단(1~2인)</div>
+                    <div class="txt text-[#757575] text-[14px] mt-[6px]">국1, 메인요리2, 반찬 4~5개(1회)</div>
+                    <div class="price text-[#b41c11] mt-[8px] font-bold">15% 55,900원</div>
+                    <div class="exception line-through text-[#bbbbbb] text-[14px]">65,800원</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section09 w-[100%] h-[1150px] mt-[100px] bg-[#f5f5f5]">
+        <div class="con w-[1200px] pt-[100px]">
+            <div class="flex justify-between items-end">
+                <div class="title">
+                    집반찬연구소 이야기
+                </div>
+                <div class="more flex gap-[5px] text-[14px] text-[#757575]">
+                    <p>더보기</p>
+                    <img src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/right.svg" alt="">
+                </div>
+            </div>
+            <div class="top-wrap mt-[35px] flex justify-between">
+                <div class="content-box bg-[#fff] ">
+                    <div class="img-box w-[380px] h-[285px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/story/2022/2022_blackfriday/thumb_gift_pc.jpg" alt="">
+                    </div>
+                    <div class="txt-box p-[20px]">
+                        <div class="text-[24px]   title-01">
+                            집반찬의 선물
+                        </div>
+                        <div class="txt h-[75px]  mt-[12px] text-[14px] text-[#757575]">
+                            <p> 모든 고객에게 증정! 주문금액별 돈까스 생선까스 우리집</p>
+                            <p>햄이 무료!</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="content-box bg-[#fff] ">
+                    <div class="img-box w-[380px] h-[285px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/story/2022/2022_worldcup/2022_worldcup_thumb_pc.jpg" alt="">
+                    </div>
+                    <div class="txt-box p-[20px]">
+                        <div class="text-[24px]   title-01">
+                            월드컵 기획전
+                        </div>
+                        <div class="txt h-[75px]  mt-[12px] text-[14px] text-[#757575]">
+                            <p>응원과 함께하고 싶은 야식을 골라주세요!</p>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="content-box bg-[#fff] ">
+                    <div class="img-box w-[380px] h-[285px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/story/2022/11_review_event/11_review_event_thumb_pc.jpg" alt="">
+                    </div>
+                    <div class="txt-box p-[20px]">
+                        <div class="text-[24px]   title-01">
+                            11월 후기 적립금 2배 이벤트
+                        </div>
+                        <div class="txt h-[75px]  mt-[12px] text-[14px] text-[#757575]">
+                            <p>(종료)5일간 후기 작성시 후기 적립금을 2배 더!</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="bottom-wrap mt-[40px] flex justify-between">
+
+                <div class="content-box bg-[#fff]">
+                    <div class="img-box w-[220px] h-[165px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/story/2022/zipbanchan_test/zipbanchan_test_thumb_pc.jpg" alt="">
+                    </div>
+                    <div class="txt-box p-[20px]">
+                        <div class="title-01">
+                            집반찬연구소...
+                        </div>
+                        <div class="txt h-[75px] text-[14px] text-[#757575] mt-[8px]">
+                            <p>(종료)2022년 11월 눈썰미</p>
+                            <p>능력 평가 시험, 집반찬연구소</p>
+                            <p>능력고사, 지금바로</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box bg-[#fff]">
+                    <div class="img-box w-[220px] h-[165px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/story/2022_kimchi/2022_kimchi_s_600.jpg" alt="">
+                    </div>
+                    <div class="txt-box p-[20px]">
+                        <div class="title-01">
+                            김치 기획전
+                        </div>
+                        <div class="txt h-[75px] text-[14px] text-[#757575] mt-[8px]">
+                            <p>김장철에 느꼇던 분위기를</p>
+                            <p>간편하게 재현해 보세요!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box bg-[#fff]">
+                    <div class="img-box w-[220px] h-[165px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/story/sales_event/2022_11/11_double_event_thumb_pc.jpg" alt="">
+                    </div>
+                    <div class="txt-box p-[20px]">
+                        <div class="title-01">
+                            11월 적립률 2...
+                        </div>
+                        <div class="txt h-[75px] text-[14px] text-[#757575] mt-[8px]">
+                            <p>(종료)단 4일간 진행하는</p>
+                            <p>적립률 2배 혜택과 함께</p>
+                            <p>든든하고 건강한 식탁을...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box bg-[#fff]">
+                    <div class="img-box w-[220px] h-[165px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/story/new_join/2022_11/2022_11_new_join_thumb_pc.jpg" alt="">
+                    </div>
+                    <div class="txt-box p-[20px]">
+                        <div class="title-01">
+                            11월 신규회원...
+                        </div>
+                        <div class="txt h-[75px] text-[14px] text-[#757575] mt-[8px]">
+                            <p>11월의 신규회원을 위한 특별한 </p>
+                            <p>혜택! 24시간만 구매 가능한 첫</p>
+                            <p>만남 선물을 확인하세요.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box bg-[#fff]">
+                    <div class="img-box w-[220px] h-[165px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/story/tiger_food/tiger_food_thumb_pc.jpg" alt="">
+                    </div>
+                    <div class="txt-box p-[20px]">
+                        <div class="title-01">
+                            전래동화 이벤트
+                        </div>
+                        <div class="txt h-[75px] text-[14px] text-[#757575] mt-[8px]">
+                            <p>(종료)다음 중 전래동화 속</p>    
+                            <p>호랑이와 관련 있는 음식은?</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <div class="section section10 mt-[70px]">
+        <div class="con w-[1200px]">
+            <div class="title">
+                고객만족후기    
+            </div>
+            <div class="content-wrap w-[1200px] flex justify-between mt-[40px]">
+                <div class="content-box w-[580px] flex gap-[20px]">
+                    <div class="img-box w-[112px] h-[112px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/7_fry/1217_ZIP_P_6229_T.jpg" alt="">
+                    </div>
+                    <div class="txt-box w-[448px] pt-[8px] ">
+                        <div class="title-box text-[14px] mt-[12px]">
+                            포슬포슬하고 호두도 들어있어 고소해요
+                        </div>
+                        <div class="txt text-[#757575] text-[12px] mt-[8px]">
+                            황태 보푸리
+                        </div>
+                        <div class="flex items-center justify-between mt-[12px] text-[12px] text-[#757575]">
+                            <div>박*경 &nbsp; ★★★★★</div>
+                            <div>2022.11.24</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box w-[580px] flex gap-[20px]">
+                    <div class="img-box w-[112px] h-[112px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/6_jolim/1612_ZIP_P_4076_T.jpg" alt="">
+                    </div>
+                    <div class="txt-box w-[448px] pt-[8px] ">
+                        <div class="title-box text-[14px] mt-[12px]">
+                            단호박과 호두가 들어있어 고소해요
+                        </div>
+                        <div class="txt text-[#757575] text-[12px] mt-[8px]">
+                            단호박조림
+                        </div>
+                        <div class="flex items-center justify-between mt-[12px] text-[12px] text-[#757575]">
+                            <div>고*자 &nbsp; ★★★★★</div>
+                            <div>2022.11.24</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrap w-[1200px] flex justify-between mt-[30px]">
+                <div class="content-box w-[580px] flex gap-[20px]">
+                    <div class="img-box w-[112px] h-[112px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/3_main/1623_ZIP_P_4078_T.jpg" alt="">
+                    </div>
+                    <div class="txt-box w-[448px] pt-[8px] ">
+                        <div class="title-box text-[14px] mt-[12px]">
+                            처음 주문했을 때 맛나서 또 주문했는데 이번에는 삼치가 싱싱하진 않았는지...
+                        </div>
+                        <div class="txt text-[#757575] text-[12px] mt-[8px]">
+                            삼치엿장조림
+                        </div>
+                        <div class="flex items-center justify-between mt-[12px] text-[12px] text-[#757575]">
+                            <div>박*아 &nbsp; ★★★★★</div>
+                            <div>2022.11.24</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box w-[580px] flex gap-[20px]">
+                    <div class="img-box w-[112px] h-[112px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/2_set/1238_ZIP_P_9239_T.jpg" alt="">
+                    </div>
+                    <div class="txt-box w-[448px] pt-[8px] ">
+                        <div class="title-box text-[14px] mt-[12px]">
+                            맛보기는 항상 만족!! 재구매의사 100프로  
+                        </div>
+                        <div class="txt text-[#757575] text-[12px] mt-[8px]">
+                            맛보기 반찬 4종
+                        </div>
+                        <div class="flex items-center justify-between mt-[12px] text-[12px] text-[#757575]">
+                            <div>박*경 &nbsp; ★★★★★</div>
+                            <div>2022.11.24</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrap w-[1200px] flex justify-between mt-[30px]">
+                <div class="content-box w-[580px] flex gap-[20px]">
+                    <div class="img-box w-[112px] h-[112px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/11_jeon_fish/1082_ZIP_P_3075_T.jpg" alt="">
+                    </div>
+                    <div class="txt-box w-[448px] pt-[8px] ">
+                        <div class="title-box text-[14px] mt-[12px]">
+                            잘먹었습니다.
+                        </div>
+                        <div class="txt text-[#757575] text-[12px] mt-[8px]">
+                            모듬전 3종_동태전,동그랑땡, 깻잎전
+                        </div>
+                        <div class="flex items-center justify-between mt-[12px] text-[12px] text-[#757575]">
+                            <div>신*호 &nbsp; ★★★★★</div>
+                            <div>2022.11.24</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box w-[580px] flex gap-[20px]">
+                    <div class="img-box w-[112px] h-[112px]">
+                        <img class="w-[100%] h-[100%]" src="https://zipbanchan.godohosting.com/800X800px/1_regular/477_ZIP_P_9076_T_2.jpg" alt="">
+                    </div>
+                    <div class="txt-box w-[448px] pt-[8px] ">
+                        <div class="title-box text-[14px] mt-[12px]">
+                            편리하고 좋아요~
+                        </div>
+                        <div class="txt text-[#757575] text-[12px] mt-[8px]">
+                            유아식단(2~3인)
+                        </div>
+                        <div class="flex items-center justify-between mt-[12px] text-[12px] text-[#757575]">
+                            <div>김*림 &nbsp; ★★★★★</div>
+                            <div>2022.11.24</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer border-t border-[#ddd] mt-[140px]">
+        <div class="footer-top">
+            <div class="con row w-[1200px] p-[40px_0]">
+                <div class="box box1 cell text-[#757575] text-[12px]">
+                    <div class="title-box font-bold">
+                        커뮤니티
+                    </div>
+                    <div class="row mt-[16px]">
+                        <div class="cell w-[120px]">공지사항</div>
+                        <div class="cell w-[120px]">이벤트</div>
+                    </div>
+                    <div class="row mt-[12px]">
+                        <div class="cell w-[120px]">자주묻는 질문</div>
+                        <div class="cell w-[120px]">1:1문의</div>
+                    </div>
+                    <div class="icon-wrap row mt-[20px]">
+                        <img class="cell" src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/kakao.svg" alt="">
+                        <img class="cell ml-[12px]" src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/insta.svg" alt="">
+                        <img class="cell ml-[12px]" src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/facebook.svg" alt="">
+                    </div>
+                    
+                </div>
+                <div class="box box2 cell ml-[100px]">
+                    <div class="title-box text-[#757575] text-[12px]">
+                        협력제안
+                    </div>
+                    <div class="text-[18px] mt-[8px] ">
+                        <p>집반찬연구소와 함께하고 싶으신 분!</p>
+                        <p class="font-bold">환영합니다.</p>
+                        
+                    </div>
+                    <div class="text-[#757575] text-[12px] mt-[8px]">
+                        생산자 / 공급업체 / 봉사단체 / 구직자
+                    </div>
+                    <div class="flex items-center mt-[8px]">
+                        <img src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/message.svg" alt="">
+                        <p>zipbanchan @sannamchon.co.kr</p>
+                    </div>
+                </div>
+                <div class="box box3 cell ml-[150px]">
+                    <div class="title-box text-[#757575] text-[12px]"> 
+                        고객센터
+                    </div>
+                    <div class="flex mt-[12px] gap-[4px]">
+                        <img src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/call.svg" alt="">
+                        <p class="font-bold text-[24px]">1588-3754</p>
+                    </div>
+                    <div class="mt-[16px] text-[#757575] text-[14px]">
+                            <p>월 ~ 토요일 08:30 ~ 17:30</p>
+                            <p>점심시간 12:00 ~ 13:00</p>
+                            <p>일요일, 공휴일은 휴무입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom bg-[#f7f7f7] text-[12px] text-[#aaaaaa]">
+            <div class="con  w-[1200px] p-[30px_0]">
+         
+                    <div class="top row">
+                        <p class="cell">집반찬연구소 소개</p>
+                        <p class="cell ml-[20px]">이용약관</p>
+                        <p class="cell ml-[20px] text-[#757575]">개인정보처리방침</p>
+                    </div>
+                    <div class="bottom row mt-[12px]">
+                        <p class="cell text-[#757575]">집반찬연구소</p>
+                        <p class="cell ml-[10px] text-[11px] underline cursor-pointer">자세히보기</p>
+                        <img src="" alt="">
+                    </div>
+                    <div class="hidden-wrap text-[#aaaaaa] mt-[4px] text-[12px]">
+                        <p class="mb-[4px]">대표 : 박종철 / 주소 : 인천광역시 미추홀구 방축로206번길 36 집반찬연구소</p>
+                        <p class="mb-[4px]">사업자번호 : 121-86-17743 / 통신판매업신고 : 제 2016-인천남구-0674 호 / 개인정보 정책 및 담당 : 김지원</p>
+                        <p class="mb-[4px]">대표번호 : 1588-3754 / 팩스번호 : 032-424-3088 / 이메일 : zipbanchan@sannamchon.co.kr</p>
+                        <p class="mb-[4px]">ⓒ SANNAMCHON CORP. All Rights Reserved.</p>
+                    </div>
+                    <div class="img-wrap  flex gap-[30px]">
+                        <img src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/inipay_60x60_gray.png" alt="">
+                        <img src="https://www.zipbanchan.co.kr/shop/remain/pc/imgs/escrow_60x60_gray.png" alt="">
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-btn w-[48px] h-[48px]">
+        <img src="./img/top.svg" alt="">
+    </div>
+    
+</div>
+</body>
+</html>

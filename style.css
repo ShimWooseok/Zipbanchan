@@ -1,0 +1,410 @@
+/* 노멀라이징 */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+.swiper-slide{
+    cursor: pointer;
+}
+
+/*라이브러리*/
+.cell {
+    float: left;
+}
+
+.cell-r {
+    float: right;
+}
+
+.row::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.con {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+/* 스타일 */
+.wrpper{
+    position: relative;
+}
+header {
+    width: 100%;
+    height: 605px;
+    position: relative;
+}
+
+header>.header-top {
+    border-bottom: 1px solid #eaeaea;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #fff;
+}
+
+header>.header-top>.con {
+    position: relative;
+}
+
+header>.header-top>.con>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header>.header-top>.con>.ul-wrap>.top-wrap>ul>li {
+    position: relative;
+}
+
+header>.header-top>.con>.ul-wrap>.top-wrap>ul>li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -15%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 11px;
+    background-color: #757575;
+}
+
+header>.header-top>.con>.ul-wrap>.top-wrap>ul>li:nth-child(3)::after {
+    display: none;
+}
+
+input {
+    border: 1px solid #284733;
+}
+
+.header-bottom>.con>ul>li {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.header-bottom>.con>ul>li>div {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.header-bottom>.con>ul>li>div>ul>li {
+    padding-bottom: 15px;
+    color: #757575;
+    cursor: pointer;
+}
+
+.header-bottom>.con>ul>li>div>ul>li:hover {
+    color: #000;
+}
+
+.swiper-box1 .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --swiper-theme-color: #284733;
+}
+
+.swiper-box1 .swiper>.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-box1 .swiper>.swiper-wrapper>.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-box1 .swiper>.swiper-wrapper>.swiper-slide {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.swiper-box1 .swiper-button-next,
+.swiper-button-prev {
+    width: 48px;
+    height: 48px;
+    background-color: #000;
+    opacity: 0.4;
+    color: #000;
+}
+
+.swiper-box1 .swiper-button-prev {
+    background-image: url(https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/left-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px 36px;
+    left: 1%;
+}
+
+.swiper-box1 .swiper-button-next {
+    background-image: url(https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/right-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-size: 36px 36px;
+    right: 1%;
+}
+
+.section>.con .title {
+    font-family: "Noto Serif KR", serif;
+    font-size: 40px;
+}
+.section>.con  .title-01 {
+    font-family: "Noto Serif KR", serif;
+    font-size: 24px;
+}
+
+.swiper-box2 {
+    position: relative;
+    width: 100%;
+    height: ;
+}
+
+.swiper-box2 .swiper-slide {
+    width: 280px;
+    height: 423px;
+}
+
+.swiper-box2 .swiper-slide>.img-box {
+    width: 280px;
+    height: 280px;
+    position: relative;
+}
+
+.swiper-box2 .swiper-slide>.img-box::after {
+    content: "";
+    position: absolute;
+    bottom: 4%;
+    right: 4%;
+    /*   transform : translate(-50%, -50%); */
+    width: 52px;
+    height: 52px;
+    background-color: #000;
+    opacity: 0.5;
+    background-image: url(https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/cart-white.svg);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center;
+}
+
+.swiper-box2 .swiper-button-next2,
+.swiper-button-prev2 {
+    width: 48px;
+    height: 48px;
+    background-color: #000;
+    opacity: 0.4;
+    color: #000;
+    display: inline-block;
+}
+
+.swiper-box2>.swiper-button-prev2 {
+    background-image: url(https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/left-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px 36px;
+    position: absolute;
+    top: 30%;
+    left: -6%;
+    z-index: 1;
+}
+
+.swiper-box2>.swiper-button-next2 {
+    background-image: url(https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/right-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-size: 36px 36px;
+    position: absolute;
+    top: 30%;
+    right: -6%;
+    z-index: 10;
+}
+.swiper-box3 .swiper-slide{
+    width: 294px;
+    height: 529px;
+}
+.swiper-box3 .swiper-slide>.img-box{
+    position: relative;
+    width: 100%;
+    height: 388px;
+}
+.swiper-box3 .swiper-slide>.img-box > img{
+    width: 100%;
+    height: 100%;
+}
+.swiper-box3 .swiper-slide>.img-box::after {
+    content: "";
+    position: absolute;
+    bottom: 4%;
+    right: 4%;
+    /*   transform : translate(-50%, -50%); */
+    width: 52px;
+    height: 52px;
+    background-color: #000;
+    opacity: 0.5;
+    background-image: url(https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/cart-white.svg);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center;
+}
+
+.swiper-box3 .swiper-pagination3 > .swiper-pagination-bullet{
+    padding: 5px 20px;
+
+}
+
+
+.slide05{
+    position: relative;
+}
+.slide05::after{
+    content: "7%";
+    position: absolute;
+    top : 3%;
+    left : 4%;
+    width: 52px;
+    height: 52px;
+    background-color: #b41c11;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 52px;
+    text-align: center;
+}
+.section08 > .con > .top-wrap > .content-box > .img-box{
+    position: relative;
+}
+.section08 > .con > .top-wrap > .content-box > .img-box::after{
+    position: absolute;
+    content: "11%";
+    top : 3%;
+    left : 3%;
+    background-color: #b41c11;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    color : #fff;
+    font-weight:bold ;
+}
+.section08 > .con > .bottom-wrap > .content-box > .img-box{
+    position: relative;
+}
+.section08 > .con > .bottom-wrap > .content-box > .img-box::after{
+    position: absolute;
+    content: "13%";
+    top : 3%;
+    left : 3%;
+    background-color: #b41c11;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    color : #fff;
+    font-weight:bold ;
+}
+.section08 > .con > .bottom-wrap > .content-box:nth-child(3) > .img-box::after{
+    position: absolute;
+    content: "15%";
+    top : 3%;
+    left : 3%;
+    background-color: #b41c11;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    color : #fff;
+    font-weight:bold ;
+}
+
+.section08 > .con .img-box::before{
+    position: absolute;
+    content: "";
+    bottom: 3%;
+    right: 3%;
+    width: 52px;
+    height: 52px;
+    background-color: #000;
+    opacity: 0.5;
+    background-image: url(https://www.zipbanchan.co.kr/shop/remain/pc/imgs/icon/cart-white.svg);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center;
+}
+.section09 > .con  .content-box{
+    box-shadow: 0px 5px 5px #ddd;
+}
+.footer > .footer-bottom > .con{
+    position: relative;
+}
+.footer > .footer-bottom > .con > .top > p{
+    position: relative;
+}
+.footer > .footer-bottom > .con > .top >p::after{
+    content: "";
+    width: 1px;
+    height: 13px;
+    position: absolute;
+    top : 11%;
+    right : -13%;
+    background-color: #aaaaaa;
+}
+.footer > .footer-bottom > .con > .top >p:nth-child(2):after{
+right : -20%;
+}
+.footer > .footer-bottom > .con > .top >p:nth-child(3):after{
+    display: none;
+}
+.footer > .footer-bottom > .con > .hidden-wrap{
+    display: none;
+}
+.footer > .footer-bottom > .con > .hidden-wrap.active{
+    display: block;
+}
+.footer > .footer-bottom > .con > .img-wrap{
+    position: absolute;
+    z-index: 10;
+    bottom : 25px;
+    right : 0%;
+}
+.top-btn{
+    display: none;
+    position: fixed;
+    bottom : 3.5%;
+    right : 1.7%;
+    z-index: 99;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.top-btn.active{
+    display: block;
+    transition: 0.5s;
+}
