@@ -45,7 +45,19 @@ function SwiperBox2__init(){
 }
 SwiperBox2__init();
 
-function SwiperBox3__init(){
+function SwiperBox3__init() {
+  var menu = Array();
+  menu.push("설 차례상")
+  menu.push("설 음식")
+  menu.push("국/찌개/탕")
+  menu.push("어린이 반찬")
+  menu.push("메인요리")
+  menu.push("무침")
+  menu.push("볶음")
+  menu.push("조림")
+  menu.push("소분야채")
+  menu.push("쿠킹박스")
+  menu.push("김치/절임/젓갈")
   var swiper = new Swiper(".swiper-box3 .mySwiper", {
     slidesPerView: 4,
     spaceBetween: 10,
@@ -53,12 +65,15 @@ function SwiperBox3__init(){
     loopFillGroupWithBlank: true,
     pagination: {
       el: ".swiper-box3 .swiper-pagination3",
-
+      clickable: true,
+        renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (menu[index]) + '</span>';
+      },
     },
     navigation: {
       nextEl: ".swiper-box3 .swiper-button-next3",
-      prevEl: ".swiper-box3 .swiper-button-prev3",
-    },
+      prevEl: ".swiper-box3 .swiper-button-prev3"
+    }
   });
 }
 
